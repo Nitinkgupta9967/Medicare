@@ -11,13 +11,13 @@ button, input { font: inherit; }
 button { cursor: pointer; }
 button:disabled { cursor: not-allowed; opacity: 0.58; }
 .app { min-height: 100vh; color: #172026; background: linear-gradient(120deg, rgba(40, 145, 125, 0.12), transparent 36%), linear-gradient(260deg, rgba(209, 84, 62, 0.10), transparent 30%), #f5f7f6; }
-.display-mode { background: #101820; color: #f5fbf9; }
+.display-mode { color: #172026; background: linear-gradient(120deg, rgba(40, 145, 125, 0.12), transparent 36%), linear-gradient(260deg, rgba(209, 84, 62, 0.10), transparent 30%), #f5f7f6; }
 .topbar { min-height: 72px; display: grid; grid-template-columns: 1fr auto auto; gap: 16px; align-items: center; padding: 14px clamp(16px, 4vw, 46px); border-bottom: 1px solid rgba(23, 32, 38, 0.12); background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 5; }
-.display-mode .topbar { background: rgba(16, 24, 32, 0.82); border-color: rgba(245, 251, 249, 0.12); }
+.display-mode .topbar { background: rgba(255, 255, 255, 0.82); border-color: rgba(23, 32, 38, 0.12); }
 .brand, .status, .nav-actions button, .panel-title, .metric, .primary-action, .avg-form button, .control-strip button { display: inline-flex; align-items: center; gap: 8px; }
 .brand { font-weight: 800; font-size: 1.1rem; }
 .nav-actions { display: inline-grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border: 1px solid rgba(23, 32, 38, 0.14); border-radius: 8px; background: rgba(255, 255, 255, 0.7); }
-.display-mode .nav-actions { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.14); }
+.display-mode .nav-actions { background: rgba(255, 255, 255, 0.7); border-color: rgba(23, 32, 38, 0.14); }
 .nav-actions button { border: 0; border-radius: 6px; padding: 9px 12px; color: inherit; background: transparent; }
 .nav-actions button.active { background: #1e7f6b; color: #fff; }
 .status { justify-self: end; padding: 8px 10px; border-radius: 999px; background: #e8ecea; color: #52615f; font-weight: 700; font-size: 0.9rem; }
@@ -47,14 +47,15 @@ input:focus { outline: 3px solid rgba(30, 127, 107, 0.18); border-color: #1e7f6b
 .token-row small, .empty { color: #667572; display: block; margin-top: 3px; }
 .empty { padding: 30px 4px; text-align: center; }
 .display-board { min-height: calc(100vh - 72px); display: grid; grid-template-columns: minmax(0, 1fr) 360px; grid-template-rows: 1fr auto; gap: 18px; padding: clamp(18px, 4vw, 50px); }
-.serving-block { grid-row: span 2; display: grid; align-content: center; justify-items: center; min-height: 520px; border-radius: 8px; background: linear-gradient(145deg, #1e7f6b, #143f3a 58%, #101820); border: 1px solid rgba(255,255,255,0.12); }
-.serving-block span, .next-strip span { text-transform: uppercase; font-weight: 900; color: rgba(245,251,249,0.72); }
-.serving-block strong { font-size: clamp(7rem, 20vw, 18rem); line-height: 0.9; }
-.serving-block small { font-size: clamp(1.1rem, 3vw, 2rem); color: #f5fbf9; }
+.serving-block { grid-row: span 2; display: grid; align-content: center; justify-items: center; min-height: 520px; border-radius: 8px; background: linear-gradient(145deg, #e3f4ed, #eef5f1); border: 1px solid rgba(30, 127, 107, 0.22); box-shadow: 0 20px 50px rgba(23, 32, 38, 0.08); }
+.serving-block span, .next-strip span { text-transform: uppercase; font-weight: 900; color: rgba(23, 32, 38, 0.72); }
+.serving-block strong { color: #1e7f6b; font-size: clamp(7rem, 20vw, 18rem); line-height: 0.9; }
+.serving-block small { font-size: clamp(1.1rem, 3vw, 2rem); color: #172026; }
 .display-stats { display: grid; gap: 12px; }
-.display-stats .metric { min-width: 0;  background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #f5fbf9; }
-.display-stats .metric small { color: rgba(245,251,249,0.64); }
+.display-stats .metric { min-width: 0; background: #eef5f1; border-color: rgba(30, 127, 107, 0.14); color: #172026; }
+.display-stats .metric small { color: #667572; }
 .next-strip { min-height: 190px; display: grid; align-content: center; gap: 4px; padding: 24px; border-radius: 8px; background: #d1543e; color: #fff; }
+.next-strip span { color: rgba(255,255,255,0.86); }
 .next-strip strong { font-size: 5rem; line-height: 1; }
 .next-strip small { font-size: 1.2rem; }
 @media (max-width: 920px) { .topbar { grid-template-columns: 1fr; align-items: stretch; } .status { justify-self: start; } .reception-layout, .display-board { grid-template-columns: 1fr; } .metric-row, .action-grid { grid-template-columns: 1fr; } .serving-block { min-height: 420px; grid-row: auto; } }
