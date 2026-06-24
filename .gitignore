@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Build output
+frontend/dist/
+dist/
+build/
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and local tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test and cache artifacts
+.cache/
+.parcel-cache/
+.vite/
+*.tsbuildinfo
+
+# Local database files
+*.sqlite
+*.sqlite3
+*.db
